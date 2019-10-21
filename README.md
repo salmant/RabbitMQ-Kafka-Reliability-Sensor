@@ -9,9 +9,11 @@ Infrastructure Reliability Sensor, which is a component running on an edge node 
 
 In order to execute the Java class, the following command should be executed:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Infrastructure_Reliability_Sensor_Kafka "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Infrastructure_Reliability_Sensor_RabbitMQ "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst"`
 <br><br>Example:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Infrastructure_Reliability_Sensor_Kafka  "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Infrastructure_Reliability_Sensor_RabbitMQ  "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108"`
 
 <br>Note: In the above commands, it should be noted that:
@@ -31,9 +33,11 @@ Network Reliability Sensor is a component which is able to measure different cha
 
 In order to execute the Java class, the following command should be executed:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Network_Reliability_Sensor_Kafka "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst" "target_ip_address"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Network_Reliability_Sensor_RabbitMQ "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst" "target_ip_address"`
 <br><br>Example:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Network_Reliability_Sensor_Kafka "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108" "157.20.20.34"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Network_Reliability_Sensor_RabbitMQ "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108" "157.20.20.34"`
 
 <br>Note: Network Reliability Sensor periodically measures all end-to-end network metrics of the connection between the current host where the Network Reliability Sensor is running and `"target_ip_address"`.
@@ -46,9 +50,11 @@ Service Reliability Sensor is a component running on an edge node (e.g. Raspberr
 
 In order to execute the Java class, the following command should be executed:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Service_Reliability_Sensor_Kafka "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Service_Reliability_Sensor_RabbitMQ "Broker_IP" "Device_Id" "Device_Type" "Interval_Sec" "Group_Id" "fragid" "res_inst"`
 <br><br>Example:
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Service_Reliability_Sensor_Kafka "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108"`
+<br>
 <br>`java -cp target/reliability-sensor-1.0.jar com.xyz.Service_Reliability_Sensor_RabbitMQ "3.120.91.124" "edge4" "rpi3edge" "10" "city-yt" "f1" "195.27.104.108"`
 
 <br>Note: You should change the code according to your application. In the sample code written for the Service Reliability Sensor, three metrics named "metric1" (double), "metric2" (long) and "metric3" (int) are defined. If you need more application-level metrics, you should define more metrics in the code. If you have less number of application-level metrics, you should eliminate metrics in the code. For each metric, there is a procedure which measures the value of the metric. Therefore, you should write your own code in this procedure to measure the value of your custom application-level metric.
