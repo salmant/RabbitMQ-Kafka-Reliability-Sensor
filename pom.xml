@@ -20,7 +20,7 @@
 	<dependency>
 		<groupId>org.json</groupId>
 		<artifactId>json</artifactId>
-		<version>20090211</version>
+		<version>20230227</version>
 	</dependency>
 	<dependency>
 		<!-- wget https://www.dropbox.com/s/7vwoheznnywe289/mqtt-producer-6.0-jar-with-dependencies.jar -->
